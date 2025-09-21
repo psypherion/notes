@@ -10,7 +10,7 @@ Tags : [[neuroscience]]
 
 : How hippocampus tags specific memories for later Consolidation during sleep
 
-![[Pasted image 20250921150110.png]]
+![[hippocampus.png]]
 
 Hippocampus : 
 Hippocampus plays a vital part in conversion of short-term memories into long-term memories, a process known as memory 

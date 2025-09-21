@@ -3,5 +3,6 @@
   "newFileFolderPath": "understanding/Brain",
   "showUnsupportedFiles": true,
   "attachmentFolderPath": "understanding/Source Material",
-  "uriCallbacks": true
+  "uriCallbacks": true,
+  "alwaysUpdateLinks": true
 }

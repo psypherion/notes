@@ -6,7 +6,7 @@ Tags :
 
 # nostalgia
   
-![[New Note.jpeg]]
+![[Hostel.jpeg]]
   
 Today, I felt I’ll miss this place. I’ll miss everything. All the things I hated, all the things I loved. How I learned and unlearned all the things. How I felt romanticism again. How we all bonded, crashed every bit. I cherish all the moments now. 
 
