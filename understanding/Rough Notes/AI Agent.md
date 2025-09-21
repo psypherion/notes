@@ -25,5 +25,6 @@ Ideas :
 [Agentic AI Projects - 1](https://youtube.com/playlist?list=PLXSkStXql1F5BhmpumykKcRlPFZml0Lgo)
 [Agentic AI Projects - 2](https://youtube.com/playlist?list=PLj0jSMWhCsdnsI6Pklh9Igru9dmUrHIxl)
 [Coding AI Agent](https://youtu.be/YtHdaXuOAks)
+[AI Agent - Hugging Face](https://huggingface.co/learn/agents-course/)
 
 
