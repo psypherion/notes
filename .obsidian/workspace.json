@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "understanding/Rough Notes/DSA.md",
+                "file": "understanding/Brain/DSA.md",
                 "mode": "source",
                 "source": false
               },
@@ -176,7 +176,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -193,10 +193,10 @@
       "audio-recorder:Start/stop recording": false
     }
   },
-  "active": "17a045d49237e0c8",
+  "active": "fb13472cb2183547",
   "lastOpenFiles": [
     "understanding/Tags/resources.md",
-    "understanding/Rough Notes/DSA.md",
+    "understanding/Brain/DSA.md",
     "understanding/Tags/job.md",
     "understanding/Tags/study.md",
     "understanding/Brain/To Die.md",
