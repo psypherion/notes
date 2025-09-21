@@ -1,6 +1,7 @@
 {
   "cssTheme": "AnuPpuccin",
-  "accentColor": "#6239c0",
+  "accentColor": "#654d9d",
   "interfaceFontFamily": "Times New Roman",
-  "translucency": true
+  "translucency": true,
+  "theme": "system"
 }
