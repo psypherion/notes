@@ -34,9 +34,19 @@
               "icon": "lucide-file",
               "title": "To Die"
             }
+          },
+          {
+            "id": "ce0e800cad6f0db7",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -197,10 +207,12 @@
       "zk-prefixer:Create new unique note": false
     }
   },
-  "active": "fb13472cb2183547",
+  "active": "ce0e800cad6f0db7",
   "lastOpenFiles": [
+    "understanding/Brain/Before Sunrise.md",
     "understanding/Brain/On Genealogy of Meaning.md",
     "understanding/Brain/To Die.md",
+    "understanding/Tags/poetry.md",
     "understanding/Tags/philosophy.md",
     "understanding/Tags/linguistics.md",
     "understanding/Tags/religion.md",
