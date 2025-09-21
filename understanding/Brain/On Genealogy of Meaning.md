@@ -2,7 +2,7 @@
 
 Status : #infancy #draft 
 
-Tags : [[god]] [[philosophy]] [[linguistics]] [[purpose]]
+Tags : [[god]] [[philosophy]] [[linguistics]] [[purpose]] [[life]]
 
 # On Genealogy of Meaning
 

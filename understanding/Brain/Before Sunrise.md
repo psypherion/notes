@@ -2,7 +2,7 @@
 
 Status : #matured #done
 
-Tags : [[poetry]] [[love]] [[god]]
+Tags : [[poetry]] [[love]] [[god]] [[life]]
 
 # Before Sunrise
 
