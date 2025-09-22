@@ -1,0 +1,2 @@
+- [ ] [All Python Concepts under 13 mins](https://youtu.be/wfL4o73swZI)
+- [ ] 
