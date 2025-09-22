@@ -39,28 +39,23 @@ My approach :
         - _Opposite directions:_ find pairs (e.g., sum of two numbers in a sorted array).
     - Notes : 
     - Problems : 
-	    - [ ] [Leetcode - 167 : Two Sum II]()
-	    - [ ] [Leetcode - 125 : Valid Palindrome]()
-	    - [ ] [Leetcode - 283 : More Zeroes]()
-	    - [ ] [Leetcode - 344 : Reverse String]()
-	    - [ ] [Leetcode - 15 : 3Sum]()
+	    - [ ] [Leetcode - 167 : Two Sum II](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/)
+	    - [ ] [Leetcode - 125 : Valid Palindrome](https://leetcode.com/problems/valid-palindrome/description/)
+	    - [ ] [Leetcode - 283 : More Zeroes](https://leetcode.com/problems/move-zeroes/description/)
+	    - [ ] [Leetcode - 344 : Reverse String](https://leetcode.com/problems/reverse-string/description/)
+	    - [ ] [Leetcode - 15 : 3Sum](https://leetcode.com/problems/3sum/description/)
 	- Template :
-```python : wrap
+````python
 		class TwoPointers:
 		    @staticmethod
-		    def find_pair(nums, target):
-		        left, right = 0, len(nums) - 1
-		        while left < right:
-		            current = nums[left] + nums[right]
-		            if current == target:
-		                return [left, right]
-		            elif current < target:
-		                left += 1
-		            else:
-		                right -= 1
-		        return None
-```
+		    def run(nums, callback, left=0, right=None):
+		        """Iteratively applies callback at each (left, right) until                    left < right. callback receives (nums, left, right) and                     must return how to move pointers.
+		        """
+                if right is None: right = len(nums) - 1
+			        while left < right:
+			            left, right = callback(nums, left, right)
 
+````
 2. **Sliding Window**
     - Refines two pointers to manage a window of elements dynamically.
     - Expands or contracts the window to meet specific conditions (e.g., longest substring without repeating characters).
@@ -72,22 +67,49 @@ My approach :
 		    - Linked List
 		- longest or shortest substring/subarray that satisfies a certain condition
 	- Problems : 
-		- [ ] [Leetcode - 3 : Longest Substring Without Repeating Characters]()
-		- [ ] [Leetcode - 76 : Minimum Window Substring]()
-		- [ ] [Leetcode - 567 : Permutation in a String]()
-		- [ ] [Leetcode - 438 : Find all Anagrams in a String]()
-		- [ ] [Leetcode - 209 : Minimum Size Subarray Sum]()
+		- [ ] [Leetcode - 3 : Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/description/)
+		- [ ] [Leetcode - 76 : Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/description/)
+		- [ ] [Leetcode - 567 : Permutation in a String](https://leetcode.com/problems/permutation-in-string/description/)
+		- [ ] [Leetcode - 438 : Find all Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/description/)
+		- [ ] [Leetcode - 209 : Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/description/)
+	- Template :
+```Python 
+	class SlidingWindow:
+    @staticmethod
+    def run(nums, window_size, process_window):
+        """Moves a window of window_size, calls process_window on each                 window.
+        """
+        for i in range(len(nums) - window_size + 1):
+            process_window(nums[i:i+window_size], i, i + window_size - 1)
+
+	```
 3. **Binary Search**
     - Efficiently finds target in logarithmic time O(log⁡n).
     - Extends to lists with monotonic conditions, not just sorted numbers.
     - Example: finding the minimum in a rotated sorted array.
     - Notes :
     - Problems :
-	    - [ ] [Leetcode - 704 : Binary Search]()
-	    - [ ] [Leetcode - 35 : Search Insert Position]()
-	    - [ ] [Leetcode - 153 : Find minimum in Rotated Sorted Array]()
-	    - [ ] [Leetcode - 33 : - 33. Search in Rotated Sorted Array]()
-	    - [ ] [Leetcode - 162 : - 162. Find Peak Element]()
+	    - [ ] [Leetcode - 704 : Binary Search](https://leetcode.com/problems/binary-search/description/)
+	    - [ ] [Leetcode - 35 : Search Insert Position](https://leetcode.com/problems/search-insert-position/description/)
+	    - [ ] [Leetcode - 153 : Find minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/)
+	    - [ ] [Leetcode - 33 : Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/description/)
+	    - [ ] [Leetcode - 162 : Find Peak Element](https://leetcode.com/problems/find-peak-element/description/)
+	- Template :
+```Python
+	class BinarySearch:
+	    @staticmethod
+	    def run(lo, hi, condition):
+	        """Finds the first 'hi' satisfying condition.
+	        'condition' is a function returning True/False."""
+	        while lo < hi:
+	            mid = lo + (hi - lo)//2
+	            if condition(mid):
+	                hi = mid
+	            else:
+	                lo = mid + 1
+	        return lo
+
+```
 
 ## Nonlinear Data Structure Patterns
 
@@ -100,12 +122,31 @@ My approach :
 	    - explores nodes level by level
 	    - Best for shortest Path
 	- Problems : 
-		- [ ] [Leetcode - 102 : Binary Tree Level Order Traversal]()
-		- [ ] [Leetcode - 200 : Number of Islands]()
-		- [ ] [Leetcode - 886 : Possible Bipartition]()
-		- [ ] [Leetcode - 1091 : Shortest Path in Binary Matrix]()
-		- [ ] [Leetcode - 994 : Rotting Oranges]()
-5. **Depth-First Search (DFS)**
+		- [ ] [Leetcode - 102 : Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/description/)
+		- [ ] [Leetcode - 200 : Number of Islands](https://leetcode.com/problems/number-of-islands/description/)
+		- [ ] [Leetcode - 886 : Possible Bipartition](https://leetcode.com/problems/possible-bipartition/description/)
+		- [ ] [Leetcode - 1091 : Shortest Path in Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/description/)
+		- [ ] [Leetcode - 994 : Rotting Oranges](https://leetcode.com/problems/rotting-oranges/description/)
+	- Templates : 
+```Python
+	from collections import deque
+	
+	class BFS:
+	    @staticmethod
+	    def run(start_nodes, get_neighbors, process_node=None):
+	        """Generic BFS traversal from start_nodes."""
+	        queue = deque(start_nodes)
+	        visited = set(start_nodes)
+	        while queue:
+	            node = queue.popleft()
+	            if process_node: process_node(node)
+	            for neighbor in get_neighbors(node):
+	                if neighbor not in visited:
+	                    visited.add(neighbor)
+	                    queue.append(neighbor)
+
+```
+4. **Depth-First Search (DFS)**
     - Dives deep into one path before exploring others.
     - Often uses recursion and is memory efficient for exploring all paths.
     - Example: counting islands in a grid.
@@ -114,22 +155,53 @@ My approach :
 	    - call stack -> Recursion
 	    - Best for where we need to search all possible paths
 	- Problems :
-		- [ ] [Leetcode - 104 : Maximum Depth of Binary Tree]()
-		- [ ] [Leetcode - 200 : Number of Islands]()
-		- [ ] [Leetcode - 695 : Max Area of Island]()
-		- [ ] [Leetcode - 78 : Subsets]()
-		- [ ] [Leetcode - 131 : Palindrome Partitioning]()
-6. **Backtracking**
+		- [ ] [Leetcode - 104 : Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/description/)
+		- [ ] [Leetcode - 200 : Number of Islands](https://leetcode.com/problems/number-of-islands/description/)
+		- [ ] [Leetcode - 695 : Max Area of Island](https://leetcode.com/problems/max-area-of-island/description/)
+		- [ ] [Leetcode - 78 : Subsets](https://leetcode.com/problems/subsets/description/)
+		- [ ] [Leetcode - 131 : Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/description/)
+	- Template :
+```Python 
+	class DFS:
+	    @staticmethod
+	    def run(node, get_neighbors, process_node=None, visited=None):
+	        """Generic DFS traversal starting at node."""
+	        if visited is None: visited = set()
+	        if node in visited: return
+	        visited.add(node)
+	        if process_node: process_node(node)
+	        for neighbor in get_neighbors(node):
+	            DFS.run(neighbor, get_neighbors, process_node, visited)
+
+```
+4. **Backtracking**
     - Extension of DFS, explores all possible solutions.
     - Builds the solution dynamically by making decisions and backtracking on invalid paths.
     - Example: letter combinations of a phone number.
     - Notes :
     - Problems : 
-	    - [ ] [Leetcode - 46 : Permutations]()
-	    - [ ] [Leetcode - 39 : Combination Sum]()
-	    - [ ] [Leetcode - 78. Subsets]()
-	    - [ ] [Leetcode - 51 : N-Queens]()
-	    - [ ] [Leetcode - 17. Letter Combinations of a Phone Number]()
+	    - [ ] [Leetcode - 46 : Permutations](https://leetcode.com/problems/permutations/description/)
+	    - [ ] [Leetcode - 39 : Combination Sum](https://leetcode.com/problems/combination-sum/description/)
+	    - [ ] [Leetcode - 78. Subsets](https://leetcode.com/problems/subsets/description/)
+	    - [ ] [Leetcode - 51 : N-Queens](https://leetcode.com/problems/n-queens/description/)
+	    - [ ] [Leetcode - 17 : Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/)
+	- Template :
+```Python
+	class Backtracking:
+	    @staticmethod
+	    def run(path, options, goal_condition, choose, unchoose, result):
+	        """Recursive backtracking, user defines choose/unchoose,                       goal_condition.
+	        """
+	        if goal_condition(path):
+	            result.append(list(path))
+	            return
+	        for option in options:
+	            choose(option, path)
+	            Backtracking.run(path, options, goal_condition, 
+						            choose, unchoose, result)
+	            unchoose(option, path)
+
+```
 ## Heaps (Priority Queue)
 
 7. **Heaps**
